@@ -31,16 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('answer-t4').value = resultT4;
 
     // t5
-    let bolshe100 = null;
-    while (bolshe100 <= 100) {
-        //bolshe100 = 1;
-        if (bolshe100 != null){
-            document.getElementById('answer-t5').value = "НЕПРАВИЛЬНО, ПЕРЕДЕЛАЙ";
-            //bolshe100 = 101;
+    document.getElementById('button-t5').addEventListener('click', function() {
+        let bolshe100 = document.getElementById('input-t5').value;
+        bolshe100 = Number(bolshe100);
+        if (bolshe100 <= 100) {
+            if (bolshe100 != null) {
+                document.getElementById('answer-t5').value = "НЕПРАВИЛЬНО, ПЕРЕДЕЛАЙ";
+            }
+        } else {
+            document.getElementById('answer-t5').value = "   ";
         }
-        bolshe100 = prompt("введи число большее 100", 101);
-    }
-
+    });
+    
     // t6
     function isprime(num) {
         if (num <= 1){
