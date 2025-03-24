@@ -8,6 +8,18 @@ html, body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+
+body {
+  scrollbar-width: none; 
+}
+
 body {
   background-color: rgb(245, 233, 220);
   font-family: Arial, sans-serif;
@@ -76,4 +88,10 @@ h3 {
 
 .element_task {
   width: 40%;
+}
+
+/* ============================================= */
+
+#answer-t3 {
+  width: 100%;
 }
