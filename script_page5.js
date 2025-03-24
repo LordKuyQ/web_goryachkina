@@ -79,5 +79,59 @@ document.addEventListener('DOMContentLoaded', function(arr) {
 
     // t2 
 
+    function flatMassive(arr) {
+        let help = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (i != arr.length - 1) {
+                help = help + arr[i] + ",";
+            }
+            else {
+                help = help + arr[i];
+            }
+        }
+        return help;
+    }
+
+    array = [1, 4, [34, 1, 20], [6, [6, 12, 8], 6]];
     
+    document.getElementById('answer-t5').value = flatMassive(array);
+    
+    // t3
+
+    function pairSumm(arr) {
+        let help = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == 0) {
+                    console.log(arr[i], arr[j])
+                    help = help + 1;
+                }
+            }
+        }
+        return help;
+    }
+
+    array = [-1, 2, 4, 7, -4, 1, -2];
+    
+    document.getElementById('answer-t6').value = pairSumm(array);
+
+    // t4
+
+    function setSumm(arr) {
+        let help = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                for (let z = j + 1; z < arr.length; z++)
+                if (arr[i] + arr[j] + arr[z] == 0) {
+                    console.log(arr[i], arr[j], arr[z])
+                    help = help + 1;
+                }
+            }
+        }
+        return help;
+    }
+
+    array = [-7, 12, 4, 6, -4, -12, 0];
+    
+    document.getElementById('answer-t7').value = setSumm(array);
 });
