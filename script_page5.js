@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function(arr) {
         {id: 3, idDone: true} ];
     
     let resultString = JSON.stringify(return_true(array));
-    document.getElementById('answer-t3').value = resultString;
+    document.getElementById('answer-t3-page5').value = resultString;
 
     // Z2
     // t1
