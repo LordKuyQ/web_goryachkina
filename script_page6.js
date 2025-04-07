@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', function(arr) {
     document.getElementById('start-t3').addEventListener('click', function() {
         displaySimple()
     });
+
+    
     // part II
     // t1
     document.getElementById('start-t4').addEventListener('click', function() {
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function(arr) {
     document.getElementById('start-t5').addEventListener('click', function() {
         const num = BigInt(document.getElementById('input-t5').value);
         if (num === BigInt(0)) {
-            document.getElementById('answer-t5').value = "инвалид";
+            document.getElementById('answer-t5').value = "2";
             return;
         }
     
