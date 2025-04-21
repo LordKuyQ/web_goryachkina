@@ -55,17 +55,18 @@
                 <div>
                     <h3>задача 2</h3>
                     <p>Решить задачу со счётчиком N, N-1 ... 2, 1, 0 через функцию delay.</p>
-                    <input type="text" id="input-t3" placeholder="   ">
-                    <input type="text" id="answer-t3" placeholder="   ">
-                    <button id="start-t3">Запустить</button>
+                    <input type="text" id="input-t4" placeholder="   ">
+                    <input type="text" id="answer-t4" placeholder="   ">
+                    <button id="start-t4">Запустить</button>
                 </div>
                 <div>
                     <h3>задача 3</h3>
                     <p>Написать функцию, возвращающую название первого репозитория на github.com по имени пользователя <br> 2 последовательных запроса:. </p>
-                    <a href="https://api.github.com/users/%USERNAME%"></a>
-                    <input type="text" id="input-t3" placeholder="   ">
-                    <input type="text" id="answer-t3" placeholder="   ">
-                    <button id="start-t3">Запустить</button>
+                    <a href="https://api.github.com/users/%USERNAME%">API</a> <br>
+                    <input type="text" id="input-t5" placeholder="   " value="lordkuyq">
+                    <input type="text" id="answer-t5" placeholder="   ">
+                    <input type="text" id="answer-2-t5" placeholder="   ">
+                    <button id="start-t5">Запустить</button>
                 </div>
 
                 <h2>Задание 3</h2>
@@ -74,7 +75,7 @@
                     <p>Перепишите, используя async/await вместо .then/catch. <br>
                         В функции getGithubUser замените рекурсию на цикл, используя async/await. </p>
 
-                    <textarea type="text" id="comment-t3"> class HttpError extends Error {
+                    <textarea type="text" id="comment-t6"> class HttpError extends Error {
                         constructor(response) {
                           super(`${response.status} for ${response.url}`);
                           this.name = 'HttpError';
@@ -113,9 +114,9 @@
                       }
                       
                       getGithubUser(); </textarea><br>
-                    <input type="text" id="input-t3" placeholder="   ">
-                    <input type="text" id="answer-t3" placeholder="   ">
-                    <button id="start-t3">Запустить</button>
+                    <input type="text" id="input-t6" placeholder="   ">
+                    <input type="text" id="answer-t6" placeholder="   ">
+                    <button id="start-t6">Запустить</button>
                 </div>
             </div>
         </div>
