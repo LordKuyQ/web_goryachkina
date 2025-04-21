@@ -1,0 +1,138 @@
+
+* {
+	margin: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+
+body {
+  scrollbar-width: none; 
+}
+
+body {
+  background-color: rgb(245, 233, 220);
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  padding-left: 1%;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ============================================= */
+
+h1 {
+  width: 100%;
+  font-family:'Merienda';
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.part {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 35%;
+  font-family:'Merienda';
+  font-size: 56px;
+  font-weight: bold;
+  width: 100%;
+  background-color: rgb(73,73,73);
+  color: rgb(233, 95, 85);
+}
+
+h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  border-bottom: 2px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-left: 1%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 24px;
+  font-weight:lighter;
+}
+
+#h1ref {
+  color: rgb(233, 95, 85);
+}
+
+#weather_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.arrow {
+  background-color: transparent;
+  width: 10%;
+  border: none;
+  font-size: xx-large;
+  justify-content: center;
+}
+
+#weather_desk_origin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 32px;
+  background-color: rgb(73,73,73);
+  width: 70%;
+  height: 500px;
+}
+
+#weather_desk_content {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.weather_column_content {
+  flex-direction: row;
+  flex: 1;
+}
+
+#img_column_content {
+  height: 256px;
+  height: 256px;
+}
+
+#h3_date {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+#p_celcia {
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(233, 95, 85);
+}
+
+.p_weather {
+  font-size: 16;
+  color: rgb(245, 233, 220);
+}
