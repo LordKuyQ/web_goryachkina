@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentDate < minDate || currentDate > maxDate) {
       alert("Дата должна быть в диапазоне от " + formatDate(minDate) + " до " + formatDate(maxDate));
       currentDate = new Date(); 
-      return;
     }
     updateWeather();
   });
