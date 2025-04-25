@@ -124,6 +124,9 @@ h3 {
   align-items: center;
   width: 100%;
   text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 64px;
+  color: rgb(233, 95, 85);
 }
 
 #p_celcia {
