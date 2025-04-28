@@ -38,16 +38,15 @@ footer {
 
 h1 {
   width: 100%;
-  font-family:'Merienda';
   font-size: 56px;
   font-weight: bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .part {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 35%;
-  font-family:'Merienda';
   font-size: 56px;
   font-weight: bold;
   width: 100%;
@@ -56,7 +55,6 @@ h1 {
 }
 
 h2 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 24px;
   font-weight: lighter;
   border-bottom: 2px solid black;
@@ -110,11 +108,13 @@ h3 {
 .weather_column_content {
   flex-direction: row;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 #img_column_content {
   height: 256px;
-  height: 256px;
+  width: 256px;
 }
 
 #h3_date {

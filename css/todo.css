@@ -1,0 +1,103 @@
+
+* {
+	margin: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+
+body {
+  scrollbar-width: none; 
+}
+
+body {
+  background-color: rgb(245, 233, 220);
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  padding-left: 1%;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ============================================= */
+
+h1 {
+  width: 100%;
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.part {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 35%;
+  font-size: 56px;
+  font-weight: bold;
+  width: 100%;
+  background-color: rgb(73,73,73);
+  color: rgb(233, 95, 85);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: lighter;
+  border-bottom: 2px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-left: 1%;
+  font-size: 24px;
+  font-weight:lighter;
+}
+
+
+/* ============================================= */
+#addrow {
+  width: 100%;
+  background: rgb(73,73,73);
+  padding: 3px 0 3px 1% ;
+  display: flex;
+  flex-direction: row;
+}
+
+#inputNewElement {
+  border: none;
+  outline:none;
+  background: rgb(73,73,73);
+  color: rgb(245, 233, 220);
+  font-size: 24px;
+}
+
+#inputNewElement:focus{
+  color: rgb(233, 95, 85);
+}
+
+.buttonNE {
+  border: none;
+  background: rgb(73,73,73);
+  color: rgb(245, 233, 220);
+  transition: color linear .1s;
+  font-size: 24px;
+}
+
+.buttonNE:hover {
+  color: rgb(233, 95, 85);
+}
