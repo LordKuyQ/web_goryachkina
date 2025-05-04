@@ -25,6 +25,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+header{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
 footer {
   padding-left: 1%;
   margin: 10px;
@@ -70,17 +76,31 @@ h3 {
 
 
 /* ============================================= */
-#addrow {
+#block {
   width: 100%;
-  background: rgb(73,73,73);
-  padding: 3px 0 3px 1% ;
   display: flex;
-  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+.div_row {
+  width: 100%;
+  background: rgb(73, 73, 73);
+  padding: 3px 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.row_content {
+  width: 50%;
+  display: flex;
 }
 
 #inputNewElement {
   border: none;
-  outline:none;
+  outline: none;
   background: rgb(73,73,73);
   color: rgb(245, 233, 220);
   font-size: 24px;
@@ -98,6 +118,37 @@ h3 {
   font-size: 24px;
 }
 
+.filterButton {
+  border: none;
+  background: rgb(73,73,73);
+  color: rgb(245, 233, 220);
+  transition: color linear .1s;
+  font-size: 24px;
+}
+
 .buttonNE:hover {
   color: rgb(233, 95, 85);
+}
+
+#ol_todo {
+  list-style-type: none;
+  padding: 0; 
+  background-color: rgb(245, 233, 220); 
+  border: 1px solid rgb(73,73,73); 
+  min-height: 39px;
+  max-height: 300px; 
+  overflow-y: auto; 
+  width: 50%;
+}
+
+#ol_todo li {
+  padding: 10px;
+  border-bottom: 1px solid rgb(73,73,73); 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+#ol_todo li:hover {
+  background-color: rgb(233, 95, 85); 
+  color: rgb(245, 233, 220); 
 }

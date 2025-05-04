@@ -1,11 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="../css/todo.css">
-    <script>
-      </script>
-      <script src="../js/script_todo.js" defer></script>
+    <script src="../js/script_todo.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KRJA-web</title>
@@ -15,24 +12,28 @@
         <h1>ToDo</h1>
     </header>
     <main>
-    <div id="block">
+        <div id="block">
+            <div class="div_row">
+                <div class="row_content">
+                    <input type="text" value="" placeholder="Введите новый элемент" id="inputNewElement">
+                    <button class="buttonNE" id="AddBtn">Add</button>
+                    <button class="buttonNE" id="ClearBtn">Clear</button>
+                </div>
+            </div>
 
-        <div id="addrow">
-            <input type="text" value="" placeholder="Введите новый элемент" id="inputNewElement">
-            <button class="buttonNE" id="AddBtn">
-                add
-            </button>
-            <button class="buttonNE" id="ClearBtn">
-                clear
-            </button>
+            <ol id="ol_todo"></ol>
+
+            <div class="div_row">
+                <div class="row_content">
+                    <button class="filterButton" data-filter="all">All</button>
+                    <button class="filterButton" data-filter="completed">Completed</button>
+                    <button class="filterButton" data-filter="incomplete">Incomplete</button>
+                </div>
+            </div>
         </div>
-        
-        
-    </div>
-
     </main>
+    <footer>
+        <p>Copyright &copy; by KRJA.prod</p>
+    </footer>
 </body>
-<footer>
-    <p>Copyright &copy; by KRJA.prod</p>
-</footer>
 </html>
