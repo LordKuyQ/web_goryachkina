@@ -6,9 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
       olTodo.innerHTML = '';
 
       const filteredList = todoList.filter(item => {
-          if (filter === 'completed') return item.completed;
-          if (filter === 'incomplete') return !item.completed;
-          return true;
+        switch (filter){
+            case 'completed':
+                return item.completed;
+            case 'completed':
+                return !item.completed;
+            default:
+                return true;
+        }
       });
 
       filteredList.forEach(item => {

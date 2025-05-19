@@ -1,0 +1,181 @@
+document.addEventListener('DOMContentLoaded', function() {
+  function signCount(arr) {
+    let right_bool;
+    let prev_bool;
+    let count = 0;
+    if (arr[0] < 0) {
+      prev_bool = false;
+    }
+    if (arr[0] >= 0) {
+      prev_bool = true;
+    }
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < 0) {
+        right_bool = false;
+      }
+      if (arr[i] >= 0) {
+        right_bool = true;
+      }
+      if (right_bool != prev_bool) {
+        count = count + 1;
+      }
+      prev_bool = right_bool;
+    }
+    console.log(count);
+  }
+
+  function f() {
+    return new Promise((resolve, reject) => {
+        const randomValue = Math.random();
+        if (randomValue < 0.5) {
+            resolve();
+        } else {
+            reject();
+        }
+    });
+}
+  
+  function CtoF(C) {
+    let F = 0;
+    F = (C * 9 / 5) + 32;
+    console.log(F);
+  }
+
+  function FtoC(F) {
+    let C = 0;
+    C = (F - 32) * 5 / 9;
+    console.log(C);
+  }
+  
+  function clearStr(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        if (!'0123456789'.includes(str[i])) {
+            result += str[i];
+        }
+    }
+    console.log(result);
+  }
+  
+  function mostRare(str){
+    let words = str.toString().split(' ');
+    let wordCount = {};
+    words.forEach(word => {
+      wordCount[word] = (wordCount[word] || 0) + 1;
+    });
+    let rarestWord = null;
+    let minCount = Infinity;
+    for (let word in wordCount) {
+      if (wordCount[word] < minCount) {
+            minCount = wordCount[word];
+            rarestWord = word;
+        }
+    }
+    console.log(rarestWord);
+  }
+
+  function randomRange(N,M) {
+    let random = Math.floor(Math.random() * (M - N + 1)) + N;
+    console.log(random);
+  }
+  
+  function pair_f(arr, suma) {
+    let help = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] == suma) {
+                help = help + 1;
+            }
+        }
+    }
+    let result;
+    if (help == 0) {
+      result = false;
+    }
+    else {
+      result = true;
+    }
+    console.log(result); 
+  }
+
+  function isPalindrome(str) {
+    return str === str.split('').reverse().join('');
+  }
+
+  function polindrom(str) {
+      let result = '';
+
+      for (let i = 0; i < str.length; i++) {
+          for (let j = i + 1; j <= str.length; j++) {
+              let substring = str.substring(i, j);
+              if (isPalindrome(substring) && substring.length > result.length) {
+                result = substring;
+              }
+          }
+      }
+
+      console.log(result); 
+  }
+
+
+  document.getElementById('start').addEventListener('click', function() {
+    console.log("Реализовать функцию, которой на вход подаётся массив целых чисел со знаком, функция возвращает, сколько раз сменился знак.");
+    signCount([1, 0, -1, -3, -5, 5, -1])
+    signCount([1, 0, 1, 3, 5, 5, 1])
+    signCount([-11, 1, 3, 5, 1])
+    
+    // console.log("Задана последовательность из N чисел. Нужно удалить из неё минимальное число элементов, чтобы оставшиеся составляли строго возрастающую последовательность.");
+    // createAsc([6,2,5,4,2,5,6])
+    // Сложна, сложна, непонятна
+    
+    console.log("Написать функцию, возвращающую промис, который с вероятностью ½ делает resolve, а с вероятностью ½ делает reject. Проверить.");
+    const promise = f();
+    promise
+        .then(() => console.log('resolved'))
+        .catch(() => console.log('rejected'));
+
+    console.log("Реализовать функции перевода градусов из Цельсия в Фаренгейты и обратно:");
+    CtoF(0) === 32
+    CtoF(50) === 122
+    CtoF(100) === 212
+    FtoC(0) === -17.7778
+    FtoC(50) === 10
+    FtoC(100) === 37.7778
+
+    console.log("Написать функцию, принимающую на вход строку с буквами и цифрами и возвращающую строку без цифр.");
+    clearStr("3f54u55f895fg5jyi454") === "fuffgjyi"
+
+    console.log("Написать функцию, принимающую на вход строку, состоящую из слов, разделённых пробелами, и возвращающую самое редко встречающееся слово:");
+    mostRare("ток кот кукож ток кот") === "кукож"
+
+    console.log("Написать функцию, выдающую случайное целое число в диапазоне от N до M. Проверить.");
+    randomRange(5, 10) === 7
+    randomRange(5, 10) === 23 // ошибка 
+
+    console.log("Что выведет этот код? Как сделать так, чтобы он вывел 1, 2, 3?");
+
+    function delay(N) {
+      return new Promise((resolve) => {
+          setTimeout(resolve, N * 1000);
+      });
+    }
+    async function Tell123() {
+        let i = 1;
+    
+        for (let j = 0; j < 3; j++) {
+            if (i <= 3) {
+                await delay(1);
+                console.log(i);
+                i++;
+            }
+        }
+    }
+    Tell123();
+  
+    console.log("Написать функцию, возвращающую самый длинный палиндром в переданной строке.");
+    polindrom("123abcba123abba") === "abcba"
+
+    console.log("В функцию передают массив чисел и желаемое число. Она возвращает true, если можно подобрать пару чисел, дающих в сумме желаемое, и false в противном случае.");
+    pair_f([1, 3, 4], 5) === true // 1 + 4
+  });
+});
